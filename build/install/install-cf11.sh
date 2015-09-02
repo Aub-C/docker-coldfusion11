@@ -20,4 +20,4 @@ wget --delete-after http://localhost:8500/CFIDE/administrator/index.cfm?configSe
 /tmp/neo-security-config.sh /opt/coldfusion11/cfusion true
 
 # Configure Apache2 to run in front of Tomcat
-/opt/coldfusion11/cfusion/runtime/bin/wsconfig -ws Apache -dir /etc/apache2/ -bin /usr/sbin/apache2 -script /etc/init.d/apache2
+/opt/coldfusion11/cfusion/runtime/bin/wsconfig -ws Apache -dir /etc/apache2 -bin /usr/sbin/apache2ctl -script /usr/sbin/apache2ctl
