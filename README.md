@@ -7,9 +7,7 @@ The variant of Apache2 that Trusty uses works slightly different so changes were
 
 ColdFusion 11 as Docker image on Ubuntu 14.04. Run
 
-    ./prepare.sh
-
-first to download ColdFusion 11 installer and latest patches. Then build the Docker container:
+Build the Docker container:
 
     docker build -t cf11 .
 
