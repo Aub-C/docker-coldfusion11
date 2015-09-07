@@ -2,6 +2,13 @@
 #
 # Script based on https://forums.adobe.com/message/4727551
 
+cd /tmp
+if [ ! -f "ColdFusion_11_WWEJ_linux64.bin" ]
+then
+        wget http://idguk.misc-files.s3.amazonaws.com/ColdFusion_11_WWEJ_linux64.bin
+        chmod 755 ColdFusion_11_WWEJ_linux64.bin
+fi
+
 /tmp/ColdFusion_11_WWEJ_linux64.bin -f installer.profile
 
 # Disable admin security
@@ -21,3 +28,8 @@ wget --delete-after http://localhost:8500/CFIDE/administrator/index.cfm?configSe
 
 # Configure Apache2 to run in front of Tomcat
 /opt/coldfusion11/cfusion/runtime/bin/wsconfig -ws Apache -dir /etc/apache2 -bin /usr/sbin/apache2ctl -script /usr/sbin/apache2ctl
+
+if [ -f "ColdFusion_11_WWEJ_linux64.bin" ]
+then
+        rm ColdFusion_11_WWEJ_linux64.bin
+fi
