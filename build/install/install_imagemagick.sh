@@ -14,4 +14,4 @@ export MAGICK_HOME="/opt/ImageMagick"
 
 export PATH="$MAGICK_HOME/bin:$PATH"
 
-export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/
+export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
