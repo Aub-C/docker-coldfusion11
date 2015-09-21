@@ -13,6 +13,13 @@ ADD ./build/install/ /tmp/
 ADD ./build/service/ /etc/service/
 ADD ./build/my_init.d/ /etc/my_init.d/
 RUN /tmp/install-cf11.sh
-RUN /tmp/install_imagemagick.sh #uncomment if not needed
 ADD ./build/apache2/sites-enabled/ /etc/apache2/sites-enabled-cms/
 RUN cp /etc/apache2/sites-enabled-cms/*.conf /etc/apache2/sites-enabled/
+
+#image magick
+WORKDIR /opt
+RUN wget -O ImageMagick.tar.gz http://www.imagemagick.org/download/binaries/ImageMagick-x86_64-apple-darwin14.3.0.tar.gz
+RUN tar xvzf ImageMagick.tar.gz; mv ImageMagick-* ImageMagick
+ENV MAGICK_HOME="/opt/ImageMagick" DYLD_LIBRARY_PATH="/opt/ImageMagick/lib/"
+RUN export PATH=/opt/ImageMagick/bin:$PATH"
+#end image magick
