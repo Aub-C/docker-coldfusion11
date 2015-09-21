@@ -13,5 +13,6 @@ ADD ./build/install/ /tmp/
 ADD ./build/service/ /etc/service/
 ADD ./build/my_init.d/ /etc/my_init.d/
 RUN /tmp/install-cf11.sh
+RUN /tmp/install_imagemagick.sh #uncomment if not needed
 ADD ./build/apache2/sites-enabled/ /etc/apache2/sites-enabled-cms/
 RUN cp /etc/apache2/sites-enabled-cms/*.conf /etc/apache2/sites-enabled/
