@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-cd $HOME
+cd /opt
 if [ ! -f "ImageMagick.tar.gz" ]
 then
     wget -O ImageMagick.tar.gz http://www.imagemagick.org/download/binaries/ImageMagick-x86_64-apple-darwin14.3.0.tar.gz
@@ -10,7 +10,7 @@ tar xvzf ImageMagick.tar.gz
 
 mv ImageMagick-* ImageMagick
 
-export MAGICK_HOME="$HOME/ImageMagick"
+export MAGICK_HOME="/opt/ImageMagick"
 
 export PATH="$MAGICK_HOME/bin:$PATH"
 
