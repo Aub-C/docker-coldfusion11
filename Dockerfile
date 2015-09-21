@@ -21,5 +21,5 @@ WORKDIR /opt
 RUN wget -O ImageMagick.tar.gz http://www.imagemagick.org/download/binaries/ImageMagick-x86_64-apple-darwin14.3.0.tar.gz
 RUN tar xvzf ImageMagick.tar.gz; mv ImageMagick-* ImageMagick
 ENV MAGICK_HOME="/opt/ImageMagick" DYLD_LIBRARY_PATH="/opt/ImageMagick/lib/"
-RUN export PATH=/opt/ImageMagick/bin:$PATH"
+RUN export PATH=/opt/ImageMagick/bin:$PATH
 #end image magick
