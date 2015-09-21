@@ -9,6 +9,8 @@ then
         chmod 755 ColdFusion_11_WWEJ_linux64.bin
 fi
 
+useradd -c "user for colfusion" -M -G www-data coldfusion
+
 /tmp/ColdFusion_11_WWEJ_linux64.bin -f installer.profile
 
 # Disable admin security
