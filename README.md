@@ -1,7 +1,7 @@
 
 docker-coldfusion11
 ===================
-Updated from naag. Added functionality to silently install ColdFusion hotfix to bring ColdFusion_11 up to the latest update/revision. 
+Updated from idguk. Added functionality to silently install ColdFusion hotfix to bring ColdFusion_11 up to the latest update/revision. 
 
 The current build is 'ColdFusion 11, Update 11'. However, the 'update' can be changed by editing the update URL in the 'install-hotfix.sh' file. 
 
