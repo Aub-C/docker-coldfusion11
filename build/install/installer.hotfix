@@ -1,0 +1,7 @@
+# silent hotfix install based on http://blogs.coldfusion.com/post.cfm/coldfusion-hotfix-installation-guide
+INSTALLER_UI=silent
+USER_INSTALL_DIR=$/$opt$/$coldfusion11
+# Instance list is optional
+# INSTANCE_LIST=cfusion,cfusionprod2
+# COMMAND_INSTALL applies only to *INX based systems.
+COMMAND_INSTALL=true
