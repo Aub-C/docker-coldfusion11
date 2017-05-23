@@ -5,10 +5,8 @@ VOLUME ["/var/www", "/tmp/config"]
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
-RUN apt-get install -y wget unzip xsltproc apache2 php5 libapache2-mod-php5 php5-mcrypt php5-gd pngcrush gifsicle
-RUN apt-get install -y imagemagick --fix-missing
+RUN apt-get install -y wget unzip xsltproc apache2 ccze openjdk-7-jdk && apt-get clean
 #apache rewrite
-RUN php5enmod mcrypt
 RUN a2enmod rewrite
 ADD ./build/install/ /tmp/
 ADD ./build/service/ /etc/service/
